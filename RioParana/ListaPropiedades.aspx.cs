@@ -227,7 +227,8 @@ namespace RioParana
                 {
                     if (cant == 0)
                     {
-                        tipo = tipo2.Substring(0, tipo2.Length - 1);
+                        //tipo = tipo2.Substring(0, tipo2.Length - 1);
+                        tipo = tipo2;
                         cant = cant + 1;
                     }
                 }
@@ -282,7 +283,8 @@ namespace RioParana
             {
                 string g = r.Field<String>("NombreMenu");
                 // string h = r.Field<String>("IdTipoDeInmueble");
-                mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                //mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                mailItems.Add(new { Name = r.Field<String>("NombreMenu"), ImageUrl = "img/inbox.gif" });
             }
 
             //mailItems.Add(new { Name = "1 DORMITORIO (" + bllInmuebles.SeleccionaCantidadInmuebles(8) + ")", ImageUrl = "img/inbox.gif" });
@@ -306,7 +308,8 @@ namespace RioParana
             {
                 string g = r.Field<String>("NombreMenu");
                 // string h = r.Field<String>("IdTipoDeInmueble");
-                mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                //mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                mailItems.Add(new { Name = r.Field<String>("NombreMenu"), ImageUrl = "img/inbox.gif" });
             }
 
 
@@ -335,7 +338,8 @@ namespace RioParana
             {
                 string g = r.Field<String>("NombreMenu");
                 // string h = r.Field<String>("IdTipoDeInmueble");
-                mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                //mailItems.Add(new { Name = r.Field<String>("NombreMenu") + " (" + bllInmuebles.SeleccionaCantidadInmuebles(Convert.ToInt32(r.Field<int>("IdTipoDeInmueble"))) + ")", ImageUrl = "img/inbox.gif" });
+                mailItems.Add(new { Name = r.Field<String>("NombreMenu"), ImageUrl = "img/inbox.gif" });
             }
 
             //mailItems.Add(new { Name = "COCHERAS (" + bllInmuebles.SeleccionaCantidadInmuebles(12) + ")", ImageUrl = "img/mailbox.gif" });

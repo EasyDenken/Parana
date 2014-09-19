@@ -586,7 +586,7 @@ namespace RioParanaDAL
             try
             {
                 //return this.ExecuteTable(@"SELECT * FROM Inmuebles WHERE IdUsuario = '" + IdUsuario + "' and IdInmueble = " + IdPropiedad, CommandType.Text, "");
-                return this.ExecuteTable(@"SELECT count(*) AS cantidad FROM Inmuebles WHERE IdTipoDeInmueble = " + numero, CommandType.Text, "");
+                return this.ExecuteTable(@"SELECT count(*) AS cantidad FROM Inmuebles WHERE IdTipoDeInmueble = " + numero + "and publica = 'SI'" , CommandType.Text, "");
             }
             catch (Exception ex)
             {
