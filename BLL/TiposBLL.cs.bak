@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using RioParanaDAL;
+
+namespace RioParanaBLL
+{
+    public class TiposBLL
+    {
+        TiposDAL dataAccess;
+        public TiposBLL()
+        {
+            this.dataAccess = new TiposDAL();
+        }
+
+        public DataTable SeleccionarTiposInmuebles()
+        {
+            return this.dataAccess.SeleccionaTipoDeInmuebles();
+        }
+    }
+}

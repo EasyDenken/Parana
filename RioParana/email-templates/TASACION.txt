@@ -1,0 +1,14 @@
+Email de Tasacion
+==========================
+
+Nombre y Apellido: [NOMBRE]
+Empresa: [EMPRESA]
+EMail: [EMAIL]
+Telefono: [TELEFONO]
+Ciudad: [CIUDAD]
+Pais: [PAIS]
+Tipo de Propiedad: [PROPIEDAD]
+Tipo de operacion: [OPERACION]
+Consulta: [CONSULTA]
+
+==========================

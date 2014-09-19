@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CCE70AD-07A3-4E3E-8980-3427F3C752CA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RioParana</RootNamespace>
+    <AssemblyName>RioParana</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\Projects\Web\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Artem.GoogleMap">
+      <HintPath>..\..\mina\RioParana\RioParanaWeb\Bin\Artem.GoogleMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="accordion.css" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\AltaImagen.aspx" />
+    <Content Include="Admin\AltaPropiedad.aspx" />
+    <Content Include="Admin\Destacadas.asmx" />
+    <Content Include="Admin\Destacadas.aspx" />
+    <Content Include="Admin\Destacadas.xml" />
+    <Content Include="Admin\EditarTipos.aspx" />
+    <Content Include="Admin\FichaPropiedad.aspx" />
+    <Content Include="Admin\images\25-1.gif" />
+    <Content Include="Admin\images\bgd.jpg" />
+    <Content Include="Admin\images\bgd2 - copia %282%29.jpg" />
+    <Content Include="Admin\images\bgd2 - copia.jpg" />
+    <Content Include="Admin\images\bgd2.jpg" />
+    <Content Include="Admin\images\bgd_top.jpg" />
+    <Content Include="Admin\images\cargarExternos_001.swf" />
+    <Content Include="Admin\images\fancybox\fancy_closebox.png" />
+    <Content Include="Admin\images\fancybox\fancy_left.png" />
+    <Content Include="Admin\images\fancybox\fancy_progress.png" />
+    <Content Include="Admin\images\fancybox\fancy_right.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_e.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_n.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_s.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_se.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Admin\images\fancybox\fancy_shadow_w.png" />
+    <Content Include="Admin\images\fancybox\fancy_title_left.png" />
+    <Content Include="Admin\images\fancybox\fancy_title_main.png" />
+    <Content Include="Admin\images\fancybox\fancy_title_right.png" />
+    <Content Include="Admin\images\fancybox\jquery.fancybox-1.2.5.css" />
+    <Content Include="Admin\images\fancybox\jquery.fancybox-1.2.5.js" />
+    <Content Include="Admin\images\fancybox\jquery.fancybox-1.2.5.pack.js" />
+    <Content Include="Admin\images\fancybox\jquery.min.js" />
+    <Content Include="Admin\images\fondo_menu_web_parana1.png" />
+    <Content Include="Admin\images\fondo_parana_menu_contacto2.png" />
+    <Content Include="Admin\images\fondo_parana_menu_empresa_1.png" />
+    <Content Include="Admin\images\fondo_parana_menu_empresa_2.png" />
+    <Content Include="Admin\images\fondo_parana_menu_empresa_3.png" />
+    <Content Include="Admin\images\fondo_parana_menu_empresa_4.png" />
+    <Content Include="Admin\images\fondo_web.png" />
+    <Content Include="Admin\images\imagenes.swf" />
+    <Content Include="Admin\images\imagen_banner_1.jpg" />
+    <Content Include="Admin\images\imagen_banner_2.jpg" />
+    <Content Include="Admin\images\imagen_banner_221.jpg" />
+    <Content Include="Admin\images\imagen_banner_3.jpg" />
+    <Content Include="Admin\images\imagen_banner_4.jpg" />
+    <Content Include="Admin\images\marque1.swf" />
+    <Content Include="Admin\images\marque222.swf" />
+    <Content Include="Admin\images\menu_admin.swf" />
+    <Content Include="Admin\images\top_login_input_bg.jpg" />
+    <Content Include="Admin\ModificarPropiedad.aspx" />
+    <Content Include="Admin\Propiedades.aspx" />
+    <Content Include="Admin\secciones.swf" />
+    <Content Include="Admin\TipoPropiedades.aspx" />
+    <Content Include="Busquedas.aspx" />
+    <Content Include="cascading.asmx" />
+    <Content Include="Contacto.aspx" />
+    <Content Include="email-templates\CONTACTO.txt" />
+    <Content Include="Empresa.aspx" />
+    <Content Include="enviarmailcontacto.php" />
+    <Content Include="FichaPropiedad.aspx" />
+    <Content Include="images\25-1.gif" />
+    <Content Include="images\bgd.jpg" />
+    <Content Include="images\bgd2 - copia %282%29.jpg" />
+    <Content Include="images\bgd2 - copia.jpg" />
+    <Content Include="images\bgd2.jpg" />
+    <Content Include="images\bgd_top.jpg" />
+    <Content Include="images\cargarExternos_001.swf" />
+    <Content Include="images\fancybox\fancy_closebox.png" />
+    <Content Include="images\fancybox\fancy_left.png" />
+    <Content Include="images\fancybox\fancy_progress.png" />
+    <Content Include="images\fancybox\fancy_right.png" />
+    <Content Include="images\fancybox\fancy_shadow_e.png" />
+    <Content Include="images\fancybox\fancy_shadow_n.png" />
+    <Content Include="images\fancybox\fancy_shadow_ne.png" />
+    <Content Include="images\fancybox\fancy_shadow_nw.png" />
+    <Content Include="images\fancybox\fancy_shadow_s.png" />
+    <Content Include="images\fancybox\fancy_shadow_se.png" />
+    <Content Include="images\fancybox\fancy_shadow_sw.png" />
+    <Content Include="images\fancybox\fancy_shadow_w.png" />
+    <Content Include="images\fancybox\fancy_title_left.png" />
+    <Content Include="images\fancybox\fancy_title_main.png" />
+    <Content Include="images\fancybox\fancy_title_right.png" />
+    <Content Include="images\fancybox\jquery.fancybox-1.2.5.css" />
+    <Content Include="images\fancybox\jquery.fancybox-1.2.5.js" />
+    <Content Include="images\fancybox\jquery.fancybox-1.2.5.pack.js" />
+    <Content Include="images\fancybox\jquery.min.js" />
+    <Content Include="images\fondo_menu_web_parana1.png" />
+    <Content Include="images\fondo_parana_menu_contacto2.png" />
+    <Content Include="images\fondo_parana_menu_empresa_1.png" />
+    <Content Include="images\fondo_parana_menu_empresa_2.png" />
+    <Content Include="images\fondo_parana_menu_empresa_3.png" />
+    <Content Include="images\fondo_parana_menu_empresa_4.png" />
+    <Content Include="images\fondo_web.png" />
+    <Content Include="images\imagenes.swf" />
+    <Content Include="images\imagen_banner_1.jpg" />
+    <Content Include="images\imagen_banner_2.jpg" />
+    <Content Include="images\imagen_banner_221.jpg" />
+    <Content Include="images\imagen_banner_3.jpg" />
+    <Content Include="images\imagen_banner_4.jpg" />
+    <Content Include="images\marque1.swf" />
+    <Content Include="images\marque222.swf" />
+    <Content Include="images\top_login_input_bg.jpg" />
+    <Content Include="images\~menu_v8_version7.swf" />
+    <Content Include="Image_Upload\22-02.jpg" />
+    <Content Include="Image_Upload\22-02_thumb.jpg" />
+    <Content Include="Image_Upload\30-01.jpg" />
+    <Content Include="Image_Upload\30-01_thumb.jpg" />
+    <Content Include="Image_Upload\corel-edificio.jpg" />
+    <Content Include="img\bgd_top.jpg" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\combo\down.png" />
+    <Content Include="img\combo\overlay.png" />
+    <Content Include="img\combo\top_login_input_bg.jpg" />
+    <Content Include="img\combo\up.png" />
+    <Content Include="img\contact_large.gif" />
+    <Content Include="img\contact_large.png" />
+    <Content Include="img\contact_small.gif" />
+    <Content Include="img\contact_small.png" />
+    <Content Include="img\deleted.gif" />
+    <Content Include="img\deleted.png" />
+    <Content Include="img\drafts.gif" />
+    <Content Include="img\drafts.png" />
+    <Content Include="img\hd_bg.gif" />
+    <Content Include="img\hd_bg.png" />
+    <Content Include="img\hd_hover_bg.gif" />
+    <Content Include="img\hd_hover_bg.png" />
+    <Content Include="img\icono_flecha_right_simple_off_.png" />
+    <Content Include="img\images.jpg" />
+    <Content Include="img\inbox.gif" />
+    <Content Include="img\inbox.png" />
+    <Content Include="img\item_bg.gif" />
+    <Content Include="img\item_bg.png" />
+    <Content Include="img\junk.gif" />
+    <Content Include="img\junk.png" />
+    <Content Include="img\mailbox.gif" />
+    <Content Include="img\mailbox.png" />
+    <Content Include="img\mail_large.gif" />
+    <Content Include="img\mail_large.png" />
+    <Content Include="img\notes_large.gif" />
+    <Content Include="img\notes_large.png" />
+    <Content Include="img\note_small.gif" />
+    <Content Include="img\note_small.png" />
+    <Content Include="img\outbox.gif" />
+    <Content Include="img\outbox.png" />
+    <Content Include="img\search.gif" />
+    <Content Include="img\search.png" />
+    <Content Include="img\sentItems.gif" />
+    <Content Include="img\sentItems.png" />
+    <Content Include="img_divfondo\btm_left.gif" />
+    <Content Include="img_divfondo\btm_left.png" />
+    <Content Include="img_divfondo\btm_line.png" />
+    <Content Include="img_divfondo\btm_right.gif" />
+    <Content Include="img_divfondo\btm_right.png" />
+    <Content Include="img_divfondo\left_line.png" />
+    <Content Include="img_divfondo\right_line.png" />
+    <Content Include="img_divfondo\top_left.png" />
+    <Content Include="img_divfondo\top_line.png" />
+    <Content Include="img_divfondo\top_right.png" />
+    <Content Include="JavaScript\AC_RunActiveContent.js" />
+    <Content Include="JavaScript\JScript.js" />
+    <Content Include="JavaScript\nicEdit.js" />
+    <Content Include="JavaScript\nicEditorIcons.gif" />
+    <Content Include="ListaPropiedades.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Publica\PropiedadesDestacadas.aspx" />
+    <Content Include="Scripts\expressInstall.swf" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.scrollablecombo.js" />
+    <Content Include="Scripts\swfobject_modified.js" />
+    <Content Include="Styles\ajax-loader.gif" />
+    <Content Include="Styles\bordes_esquinas.css" />
+    <Content Include="Styles\contacto.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="ThumbnailCreator.aspx" />
+    <Content Include="UserControls\ucBuscador.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Tasaciones.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AltaImagen.aspx.cs">
+      <DependentUpon>AltaImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AltaImagen.aspx.designer.cs">
+      <DependentUpon>AltaImagen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AltaPropiedad.aspx.cs">
+      <DependentUpon>AltaPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AltaPropiedad.aspx.designer.cs">
+      <DependentUpon>AltaPropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Destacadas.asmx.cs">
+      <DependentUpon>Destacadas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\Destacadas.aspx.cs">
+      <DependentUpon>Destacadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Destacadas.aspx.designer.cs">
+      <DependentUpon>Destacadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditarTipos.aspx.cs">
+      <DependentUpon>EditarTipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditarTipos.aspx.designer.cs">
+      <DependentUpon>EditarTipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FichaPropiedad.aspx.cs">
+      <DependentUpon>FichaPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FichaPropiedad.aspx.designer.cs">
+      <DependentUpon>FichaPropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarPropiedad.aspx.cs">
+      <DependentUpon>ModificarPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarPropiedad.aspx.designer.cs">
+      <DependentUpon>ModificarPropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Propiedades.aspx.cs">
+      <DependentUpon>Propiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Propiedades.aspx.designer.cs">
+      <DependentUpon>Propiedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TipoPropiedades.aspx.cs">
+      <DependentUpon>TipoPropiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TipoPropiedades.aspx.designer.cs">
+      <DependentUpon>TipoPropiedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Geocode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Data\ImageResize.cs" />
+    <Compile Include="cascading.cs">
+      <DependentUpon>cascading.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Busquedas.aspx.cs">
+      <DependentUpon>Busquedas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Busquedas.aspx.designer.cs">
+      <DependentUpon>Busquedas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.aspx.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa.aspx.designer.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FichaPropiedad.aspx.cs">
+      <DependentUpon>FichaPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FichaPropiedad.aspx.designer.cs">
+      <DependentUpon>FichaPropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPropiedades.aspx.cs">
+      <DependentUpon>ListaPropiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPropiedades.aspx.designer.cs">
+      <DependentUpon>ListaPropiedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publica\PropiedadesDestacadas.aspx.cs">
+      <DependentUpon>PropiedadesDestacadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Publica\PropiedadesDestacadas.aspx.designer.cs">
+      <DependentUpon>PropiedadesDestacadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ThumbnailCreator.aspx.cs">
+      <DependentUpon>ThumbnailCreator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBuscador.ascx.cs">
+      <DependentUpon>ucBuscador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBuscador.ascx.designer.cs">
+      <DependentUpon>ucBuscador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasaciones.aspx.cs">
+      <DependentUpon>Tasaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasaciones.aspx.designer.cs">
+      <DependentUpon>Tasaciones.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\RioParanaBLL.csproj">
+      <Project>{E8FD38F1-EC03-4BCE-8031-BEDEF2703376}</Project>
+      <Name>RioParanaBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\RioParanaDAL.csproj">
+      <Project>{D1503BDA-7824-4312-8CFD-66871082D3EA}</Project>
+      <Name>RioParanaDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OBJ\RioParanaOBJ.csproj">
+      <Project>{AE937EDD-5AB3-4719-8DC5-4B11CFE8850B}</Project>
+      <Name>RioParanaOBJ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6568</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

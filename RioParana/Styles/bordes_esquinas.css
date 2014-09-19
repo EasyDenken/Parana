@@ -1,0 +1,82 @@
+
+div.top_divfondo
+{
+	
+	margin:0px;}
+	
+div.top_divfondo .esquina_sup_izq  
+{
+	float:left;
+                          
+                           }
+
+div.top_divfondo .esquina_sup_med 
+{
+
+	 background-image:url(../img_divfondo/top_line.png);
+	background-repeat:repeat-x;
+	height:28px;
+	margin:0px 21px 0px 24px;
+	padding:0px 0px 0px 0px;
+	 }
+	
+div.top_divfondo .esquina_sup_der  
+{
+	float:right;
+	vertical-align:top;
+	margin-top:-28px;
+}
+
+div.content_imagenes  
+{
+	background-color:#ededed;
+	background-image:url(../img_divfondo/left_line.png); 
+	background-repeat:repeat-y;
+	
+ }
+	
+div.boxcontrol_menu  
+{
+	padding:0 5% 0 5%; 
+	background-image:url(../img_divfondo/right_line.png); 
+	background-position:right;
+	background-repeat:repeat-y;
+	min-height:350px;
+	vertical-align:top;
+	 }
+	
+	div.boxcontrol_resultados { padding:0 3% 0 3%; 
+	background-image:url(../img_divfondo/right_line.png); 
+	background-position:right;
+	background-repeat:repeat-y;
+	min-height:600px;
+	vertical-align:top;
+	 }
+div.bottom_divfondo {
+	
+	border:0;
+	padding:0;
+	margin:0px;}
+	
+div.bottom_divfondo  .esquina_inf_izq { float:left;
+background-color:transparent;
+ }
+ 
+div.bottom_divfondo  .esquina_inf_med { 
+	background-image:url(../img_divfondo/btm_line.png); 
+	background-repeat:repeat-x; 
+	height:28px;
+	margin:0px 20px 0px 20px;
+ }
+ 
+div.bottom_divfondo .esquina_inf_der { float:right;
+background-color:transparent;
+margin-top:-28px;
+ }
+
+h1 { margin:0; border-bottom:1px dashed ;}
+
+	
+/* IE 5.5 box model hack para posicionar correctamente las imagenes de esquina */
+* html img.esquina_sup_izq, * html img.esquina_inf_izq  { margin-left:-.2em;  margin-left:0; }
+* html img.esquina_inf_der, * html img.esquina_sup_der { margin-left:.2em; } 

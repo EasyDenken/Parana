@@ -1,0 +1,368 @@
+﻿body {
+margin: 0 auto;
+padding: 0;
+color: #000;
+font-size: 10pt;
+font-family: Tahoma;
+background: #ffffff url(../images/bgd2.jpg) center repeat-y;
+}
+			/* WRAP */
+
+
+
+
+#base_fondo 
+{
+	position:relative;
+	background-image: url(../images/fondo_web.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	vertical-align:top;
+	width:100%;
+	min-height:900px;
+
+}
+
+.main
+{
+    height:auto;
+    padding:0px 0px 0px 0px;
+}
+
+	
+
+a:link
+{
+    text-decoration: none;
+    color:Black;
+}
+
+a:hover
+{
+    color: #000;
+    text-decoration: none;
+}
+
+
+		
+				/* MAIN CONTENT */
+#content 
+{
+	background: url(../images/fondo_web.png) no-repeat top;
+	min-height:900px;
+	margin-top:0px;
+	position:relative;
+	height:auto;
+	width:100%;
+	vertical-align:top;
+	padding: 50px 0px 0px 0px;
+	
+}
+
+ .contenido_menu_resultados
+        {
+            padding: 1px;
+            border: solid 1px #333333;
+            width: 200px;
+            vertical-align:top;
+            margin-top:0 auto;
+        }
+
+
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 0px 8px 0px;
+    width: 200px;
+    min-height: 200px;
+}
+
+
+
+				/* FOOTER */
+#footer {
+	position:relative;
+	bottom: 0px;
+	width: 970px;
+	padding: .5em;
+	clear: both;
+	font-size: 11px;
+	color: #fff;
+	background: #000;
+	border-top: 1px solid #aaa;
+	text-align: center;
+}
+			
+				
+				
+#container {
+width: 979px;
+margin: 0 auto;
+padding: 0;
+text-align: left;
+color: #666;
+
+background: #fff;
+}
+
+	
+#banner_arriba {
+	height: 2px;
+	margin-top:0px;
+
+}
+
+	
+	
+			/* BANNER */
+#banner_abajo {
+width: 979px;
+margin: 110px 0 -30px 0;
+padding: 0;
+height: 190px;
+color: #000;
+
+}
+
+		/* CONTENIDO BOX DERECHO IZQUIERDO */
+						
+#lado_izquierdo 
+{
+	vertical-align:top;
+	width: 240px;
+	float: left;
+	margin: 0 auto;
+	padding:35px 0px 0px 15px;
+	background: inherit;
+	height:auto;
+
+}
+
+				
+#lado_derecho 
+{
+	vertical-align:top;
+	width:685px;
+	float:right;
+	min-height:700px;
+	padding:35px 20px 0px 15px;
+
+
+}
+			
+
+
+
+#lado_izder 
+{
+	vertical-align:top;
+	width: 96%;
+	float: left;
+	margin: 0 auto;
+	padding:35px 15px 0px 15px;
+	background: inherit;
+	height:auto;
+
+}
+		
+
+
+
+				/* FOOTER */
+#footer {
+	position:relative;
+	bottom: 0px;
+	width: 970px;
+	padding: .5em;
+	clear: both;
+	font-size: 11px;
+	color: #fff;
+	background: #000;
+	border-top: 1px solid #aaa;
+	text-align: center;
+}
+				/* LINKS*/
+a {
+color: #666;
+text-decoration: none;
+}
+a:hover {
+background: #eee;
+color:  #708491;
+text-decoration: none;
+}
+a img {
+border: 0;
+}
+				/* SEARCH BOX*/
+legend {
+font-weight : bold;
+color : #000;
+}
+input {
+background : #fff;
+color : #000;
+}
+				/* TYPOGRAPHY */
+h2 {
+margin: 0;
+font: normal 150% verdana, arial, "Trebuchet MS", sans-serif;
+letter-spacing: 3px;
+color: #000;
+background: inherit;
+}
+blockquote {
+font-weight : bold;
+font-style : italic;
+color : #aaa;
+}
+				/* CLASSES*/
+.imgright {
+float : right;
+padding : 10px;
+border : 1px solid #aaa;
+margin-left : 10px;
+}
+.big {
+margin : 5px;
+font: 200% "Trebuchet MS", verdana, arial, sans-serif;
+font-size:200%;
+line-height: 2em;
+text-transform : uppercase;
+background: #fff;
+color: #2e2e2e;
+}
+
+
+       
+        
+        
+  .fondo_menu_lateral 
+  {
+  	background-image: url(../images/fondo_menu_web_parana1.png);
+  	width:270px;
+  	height:auto;
+  	padding:12px;
+  	}
+
+.page
+{
+    width: 100%;
+    height:auto;
+
+
+
+}
+
+
+.post
+{
+	padding-bottom: 0px;
+	line-height: 200%;
+	
+}
+
+.post h1
+{
+	font-weight: normal;
+}
+
+
+.byline
+{
+
+    background: #DFDFDF;
+    margin: 10px 0px 20px 0px;
+    padding: 4px 10px;
+    color: #3F6A8D;
+    height: 22px;
+}
+
+
+
+/*********************************  PAGINA DE COMBO BOX *****************************************/
+
+
+.cb_select
+{
+  text-transform:none;
+  width:200px;
+  float:left;
+  position:relative;
+  margin:4px 0px;
+  letter-spacing:normal;
+  color: #666;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:12px;
+
+
+}
+.cb_select .cb_selectMain{
+  border: 1px solid #999;
+  background-color:#eee;
+  background-image:url(../img/combo/top_login_input_bg.jpg);
+  background-repeat: repeat-x;
+  background-position:95% 50%;
+  letter-spacing:normal;
+  cursor:pointer;
+  text-align:left;
+  height:23px;
+  line-height:23px;
+  text-indent:4px;
+  width:288px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:10;
+  color: #666;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:12px;
+
+}
+.cb_down{
+  background-image:url(../img/combo/down.png);
+  background-image: 
+}
+.cb_up{
+  background-image:url(../img/combo/up.png);
+}
+.cb_selectWrapper{
+  width:200px;
+  display:none;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:1000;
+  height:150px;
+  border: 1px solid #999;
+  background-color:#fff;
+  margin:26px 0px 0px 0px;
+  background:#ffffff url(../img/combo/overlay.png) repeat-x top left;
+  -moz-box-shadow:0px 0px 2px #333 inset;
+  -webkit-box-shadow:0px 0px 2px #333 inset;
+  box-shadow:0px 0px 2px #333 inset;
+}
+.cb_selectWrapper ul {
+  list-style:none;
+  padding:0px;
+  margin:0px;
+  width:100%;
+}
+.cb_selectWrapper ul li a{
+
+  cursor:pointer;
+  display:block;
+  padding:3px 0px;
+  color:#555;
+  text-shadow:1px 1px 1px #fff;
+}
+.cb_selectWrapper ul li a:hover{
+  background-color:#616161;
+  color:#fff;
+  text-shadow:1px 1px 1px #000;
+}
+
+/*********************************  PAGINA DE COMBO BOX *****************************************/

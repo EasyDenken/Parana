@@ -1,0 +1,75 @@
+﻿.accordion  
+{
+    font-size:8.5pt;
+    font-family:Tahoma;
+	margin-right: 12px;
+	margin-left:3px;
+	margin-top:0px;
+}
+.accordion .header 
+{
+    cursor:pointer;
+    background:url(img/bgd_top.jpg) repeat-x;
+    border-bottom:solid 1px #000;
+    border-left:solid 1px #000;
+    border-right:solid 1px #000;
+    border-top:solid 1px #000;
+       
+}
+.accordion .header DIV
+{
+    cursor:pointer;
+    height:30px;
+    padding-left:23px;
+    background-color:Transparent;
+    background-position:center left;
+    background-repeat:no-repeat;
+
+}
+.accordion .header SPAN
+{
+    cursor:pointer;
+    font-weight:bold;
+    display:block;
+    padding-top:8px;
+    color:#000;
+}        
+.accordion .header:hover
+{
+    cursor:pointer;
+    height:31px;
+    background-color:Transparent;
+    background:url(img/hd_hover_bg.gif) repeat-x;
+    border-bottom:none;
+}                
+.accordion UL        
+{
+    padding:0;
+    padding-right:8px;
+    padding-left:22px;
+    list-style-type:none;
+    background:url('img/bg_textos2.png');
+	margin-bottom:0px;
+	margin-top:0px;
+}
+.accordion LI
+{
+    padding:8px 0px 12px 0px;
+    cursor:hand;
+    margin-right:0px;
+    list-style-type:none;
+    background-image: url('img/flecha_roja.png');
+    background-repeat:no-repeat;
+    background-position:right;
+    
+}
+.accordion LI DIV
+{
+    padding-left:10px;
+
+    cursor:hand;
+}
+.accordion LI:hover
+{
+    text-decoration:underline;
+}

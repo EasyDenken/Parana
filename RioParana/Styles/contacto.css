@@ -1,0 +1,67 @@
+/*********************************  PAGINA DE CONTACTO *****************************************/
+.contacto {
+	min-height:600px;
+	height: auto;
+	width: 100%;
+	padding: 5px 0px;
+	border:0px;
+}
+
+.contacto h1
+{
+	color: #222222;
+}
+
+
+.contacto label.cmn_label {
+	display: block;
+	width: 43%;
+	font:bold 10px Verdana, Arial, Helvetica, sans-serif;
+	line-height: 8px;
+	padding: 0px 25px 10px 0px;
+	float:left
+}
+
+.contacto .cmn_label input {
+	display: block;
+	margin-top: 3px;
+	width:100%;
+	height:23px;
+	padding: 0px 4px;
+	border:1px solid #999;
+	background: url(../images/top_login_input_bg.jpg) repeat-x top left;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#666;
+
+}
+
+.contacto .cmn_label textarea {
+	display: block;
+	margin-top: 3px;
+	padding: 3px 4px;
+	border:1px solid #999;
+	background: #F6F6F6 url('../images/top_login_input_bg.jpg') repeat-x left top;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#666;
+
+}
+
+.contacto label.button_label{
+	display:block;
+	height:30px; 
+	width:130px; 
+	float:left;
+	padding:3px 0px 0px 0px;
+}
+
+.form_button {
+background: black ;
+border: solid #CCC;
+color: white;
+display: block;
+float: left;
+font: normal normal normal 10px/normal Tahoma, Arial, Helvetica, sans-serif;
+height: 22px;
+padding: 0px 10px 3px;
+width: auto;
+}

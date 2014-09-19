@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data.Common;
+using System.Data;
+
+namespace RioParanaDAL
+{
+    public class TiposDAL : DBAccessBase
+    {
+        public DataTable SeleccionaTipoDeInmuebles()
+        {
+            this.OpenConnection();
+            try
+            {
+                return this.ExecuteTable(@"SELECT 0 as IdTipoDeInmueble, 'Seleccione un Tipo De Inmueble' as Tipo
+                                            UNION
+                                        SELECT IdTipoDeInmueble, Tipo from TiposDeInmuebles", CommandType.Text, "");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+    }
+}
