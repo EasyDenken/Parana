@@ -18,7 +18,10 @@ namespace RioParana.Admin
         {
             if (!IsPostBack)
             {
-                XmlTextReader reader = new XmlTextReader(Server.MapPath("~\\Admin\\Destacadas.xml"));
+
+                //XmlTextReader reader = new XmlTextReader(Server.MapPath("~\\Admin\\Destacadas.xml"));
+
+                XmlReader reader = XmlTextReader.Create(Server.MapPath("~\\Admin\\Destacadas.xml"));
 
                 reader.MoveToContent();
                 reader.ReadStartElement();
