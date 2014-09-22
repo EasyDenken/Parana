@@ -203,10 +203,6 @@
                                     <%# precio((string)Eval("PrecioAlquiler").ToString())%>
                                 </font></b>
                                 <br>
-                                <b>Comisión: </b>
-                                <%# Eval("Comision")%>
-                                %
-                                <br>
                                 <b>Localidad: </b>
                                 <%# Eval("NombreLocalidad")%>
                                 /
