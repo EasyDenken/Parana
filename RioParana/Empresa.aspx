@@ -56,9 +56,6 @@
                    <b><font size="3">Tel:</font></b><br />
                    0341 - 4499107
                    <br />
-                   5680381/2<br />
-                   <br />
-                   Zona Centro<br />
                    <br />
                    <br />
                    <br />

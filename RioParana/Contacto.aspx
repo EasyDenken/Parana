@@ -37,12 +37,6 @@
                         <b><font size="3">Tel:</font></b><br />
                         0341 - 4499107
                         <br />
-                        5680381/2<br />
-                        <br />
-                        Zona Centro<br />
-                        Zona Centro<br />
-                        <br />
-                        <br />
                         <br />
                         <b><font size="3">Staff:</font><br />
                             <span class="style2"><span class="Apple-style-span" style="border-collapse: separate;
@@ -92,9 +86,6 @@
                                 <br />
                                 <b>Celeste Chacur</b><br />
                                 <a href="mailto:celestechacur@riopanananet.com.ar">celestechacur@riopanananet.com.ar</a><br />
-                                <br />
-                                <b>Cecilia Cimarelli</b><br />
-                                <a href="mailto:ceciliacimarelli@rioparananet.com.ar">ceciliacimarelli@rioparananet.com.ar</a><br />
                                 <br />
                                 <span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0);
                                     font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal;
