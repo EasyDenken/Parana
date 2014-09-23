@@ -78,10 +78,10 @@ namespace RioParana.Admin
             writer.WriteStartElement("Destacadas");
 
              //Write sub-elements
-            writer.WriteElementString("Destacadas1 nombre=", ddlInmuebles.SelectedValue.ToString());
-            writer.WriteElementString("Destacadas2 nombre=", ddlInmuebles1.SelectedValue.ToString());
-            writer.WriteElementString("Destacadas3 nombre=", ddlInmuebles2.SelectedValue.ToString());
-            writer.WriteElementString("Destacadas4 nombre=", ddlInmuebles3.SelectedValue.ToString());
+            writer.WriteElementString("Destacadas1", ddlInmuebles.SelectedValue.ToString());
+            writer.WriteElementString("Destacadas2", ddlInmuebles1.SelectedValue.ToString());
+            writer.WriteElementString("Destacadas3", ddlInmuebles2.SelectedValue.ToString());
+            writer.WriteElementString("Destacadas4", ddlInmuebles3.SelectedValue.ToString());
 
             // end the root element
             writer.WriteEndElement();
