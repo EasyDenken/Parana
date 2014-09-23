@@ -26,20 +26,26 @@ namespace RioParana.Admin
                 reader.MoveToContent();
                 reader.ReadStartElement();
 
+                try
+                {
+                    reader.ReadToNextSibling("Destacadas1");
+                    CascadingDropDown1.SelectedValue = reader.ReadString();
 
-                reader.ReadToNextSibling("Destacadas1");
-                CascadingDropDown1.SelectedValue = reader.ReadString();
+                    reader.ReadToNextSibling("Destacadas2");
+                    CascadingDropDown2.SelectedValue = reader.ReadString();
 
-                reader.ReadToNextSibling("Destacadas2");
-                CascadingDropDown2.SelectedValue = reader.ReadString();
+                    reader.ReadToNextSibling("Destacadas3");
+                    CascadingDropDown3.SelectedValue = reader.ReadString();
 
-                reader.ReadToNextSibling("Destacadas3");
-                CascadingDropDown3.SelectedValue = reader.ReadString();
+                    reader.ReadToNextSibling("Destacadas4");
+                    CascadingDropDown4.SelectedValue = reader.ReadString();
 
-                reader.ReadToNextSibling("Destacadas4");
-                CascadingDropDown4.SelectedValue = reader.ReadString();
-
-                reader.Close();
+                    reader.Close();
+                }
+                catch
+                {
+                    
+                }
 
                 /*
                 bllDestacadas = new DestacadasBLL();
@@ -71,6 +77,7 @@ namespace RioParana.Admin
 
 
             XmlTextWriter writer = new XmlTextWriter(Server.MapPath("~\\Admin\\Destacadas.xml"), null);
+            //XmlTextWriter writer = XmlTextWriter.Create(Server.MapPath("~\\Admin\\Destacadas.xml"));
 
             writer.Formatting = Formatting.Indented;
 
