@@ -19,9 +19,11 @@ namespace RioParana
         {
             if (!IsPostBack)
             {
-                ddlPaises.SelectedValue = "0";
+                CascadingDropDown1.SelectedValue = "1";
 
-                ddlProvincias.SelectedValue = "0";
+                //ddlPaises.SelectedValue = "1";
+
+                //ddlProvincias.SelectedValue = "0";
             }
         }
 
@@ -51,7 +53,8 @@ namespace RioParana
                 objInmueble.IDProvincia = int.Parse(ddlProvincias.SelectedValue.ToString());
                 objInmueble.IDZona = int.Parse(ddlZonas.SelectedValue.ToString());
 
-                dt = bllInmuebles.SeleccionaInmueblesBusqueda2(objInmueble.IDTipoDeInmueble, objInmueble.IDOperacion, "IdInmueble");
+                dt = bllInmuebles.SeleccionaInmueblesBusqueda(objInmueble, objInmueble.IDTipoDeInmueble);
+                //dt = bllInmuebles.SeleccionaInmueblesBusqueda2(objInmueble.IDTipoDeInmueble, objInmueble.IDOperacion, "IdInmueble");
 
                 if (dt.Rows.Count != 0)
                 {
@@ -62,8 +65,9 @@ namespace RioParana
                     Session["grd_ItemList"] = dt;
                     DataGrid1.Visible = true;
 
-                    CollapsiblePanelExtenderBusqueda.Collapsed = true;
-                    CollapsiblePanelExtenderBusqueda.ClientState = "true";
+                    //Oculta la busqueda
+                    //CollapsiblePanelExtenderBusqueda.Collapsed = true;
+                    //CollapsiblePanelExtenderBusqueda.ClientState = "true";
 
                 }
                 else if (dt.Rows.Count == 0)

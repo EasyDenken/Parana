@@ -72,7 +72,7 @@
     <asp:Panel ID="PanelBusqueda" runat="server">
         <table align="center" class="style1" style="width: 100%;">
             <tr>
-                <td width="128" style="width: 128px">&nbsp;                </td>
+                <td width="128" style="width: 153px">&nbsp;                </td>
                 <td colspan="2">&nbsp;                </td>
                 <td>&nbsp;                </td>
                 <td width="635">&nbsp;                </td>

@@ -322,21 +322,52 @@ namespace RioParanaDAL
 
         public DataTable SeleccionaInmueblesBusqueda(Inmueble objInmueble, int tipoPropiedad)
         {
-            string sql = " and Inmuebles.IdTipoDeInmueble = " + tipoPropiedad.ToString();
+            string sql=" and Inmuebles.IdEstado = '1' and Inmuebles.Publica = 'Si'";
+
+            if (tipoPropiedad.ToString() != "0")
+            {
+                sql += " and Inmuebles.IdTipoDeInmueble = '" + tipoPropiedad.ToString() + "'";
+            }
+            if (objInmueble.IDLocalidad != 0)
+            {
+                sql += " and Inmuebles.idLocalidad = '" + objInmueble.IDLocalidad + "'";
+            }
+            if (objInmueble.IDOperacion != 0)
+            {
+                sql += " and Inmuebles.IdOperacion = '" + objInmueble.IDOperacion + "'";
+            }
+            if (objInmueble.IDTipoDeInmueble != 0)
+            {
+                sql += " and Inmuebles.IdTipoDeInmueble = '" + objInmueble.IDTipoDeInmueble + "'";
+            }
+
 
             this.OpenConnection();
 
             try
             {
 
-                return this.ExecuteTable(@"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, Operaciones.Operacion AS Operacion, Estados.Estado AS Estado, TiposDeInmuebles.Tipo AS TipoDeInmueble
-                                           FROM Inmuebles INNER JOIN 
-                                           Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
-                                           Provincias ON Localidades.IdProvincia = Provincias.IdProvincia INNER JOIN 
+                return this.ExecuteTable(@"SELECT 
                                             
-                                           Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN
-                                           TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN
-                                           Estados ON Inmuebles.IdEstado = Estados.IdEstado and Estados.Estado = 'Activo'" + sql, CommandType.Text, "");
+                                           Inmuebles.*, 
+                                           Localidades.Nombre AS NombreLocalidad, 
+                                           Provincias.Nombre AS NombreProvincia, 
+                                           Operaciones.Operacion AS Operacion, 
+                                           Estados.Estado AS Estado, 
+                                           TiposDeInmuebles.Tipo AS TipoDeInmueble
+                                           
+                                           FROM Inmuebles 
+                                           
+                                           INNER JOIN 
+                                            Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad 
+                                           INNER JOIN 
+                                            Provincias ON Localidades.IdProvincia = Provincias.IdProvincia 
+                                           INNER JOIN 
+                                            Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion 
+                                           INNER JOIN
+                                            TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble 
+                                           INNER JOIN
+                                            Estados ON Inmuebles.IdEstado = Estados.IdEstado" + sql, CommandType.Text, "");
             }
             catch (Exception ex)
             {
