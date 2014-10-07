@@ -51,7 +51,7 @@ namespace RioParana
                 objInmueble.IDProvincia = int.Parse(ddlProvincias.SelectedValue.ToString());
                 objInmueble.IDZona = int.Parse(ddlZonas.SelectedValue.ToString());
 
-                dt = bllInmuebles.SeleccionaInmuebles(objInmueble.IDTipoDeInmueble, objInmueble.IDOperacion, "IdInmueble");
+                dt = bllInmuebles.SeleccionaInmueblesBusqueda2(objInmueble.IDTipoDeInmueble, objInmueble.IDOperacion, "IdInmueble");
 
                 if (dt.Rows.Count != 0)
                 {

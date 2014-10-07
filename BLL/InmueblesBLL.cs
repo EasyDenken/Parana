@@ -27,6 +27,11 @@ namespace RioParanaBLL
             return this.dataAccessInmuebles.SeleccionaInmuebles(tipo, operacion, orden);
         }
 
+        public DataTable SeleccionaInmueblesBusqueda2(int tipo, int operacion, string orden)
+        {
+            return this.dataAccessInmuebles.SeleccionaInmueblesBusqueda2(tipo, operacion, orden);
+        }
+
         public DataTable SeleccionaInmueblesBusqueda(Inmueble objInmueble, int tipoPropiedad)
         {
             return this.dataAccessInmuebles.SeleccionaInmueblesBusqueda(objInmueble, tipoPropiedad);

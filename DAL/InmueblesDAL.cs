@@ -62,8 +62,78 @@ namespace RioParanaDAL
                                            TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN 
                                            Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN 
                                            Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
+                                           Provincias ON Localidades.IdProvincia = Provincias.IdProvincia" + sql, CommandType.Text, "");
+                    /*
+                     *  inner join 
+                                                                   Usuarios ON Usuarios.IdUsuario = Inmuebles.IdUsuario 
+                                                                   WHERE Usuarios.IdUsuario in (select IdUsuario from Usuarios where IdInmobiliaria 
+                                                                   in 
+                                                                   (select IdInmobiliaria from Usuarios 
+                                                                   where IdUsuario = '" + IdUsuario + "'))*/
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+        public DataTable SeleccionaInmueblesBusqueda2(int tipo, int operacion, string orden)
+        {
+            this.OpenConnection();
+
+            string sql = "";
+
+            if (tipo != 0)
+            {
+                sql += " and Inmuebles.IdTipoDeInmueble = " + tipo.ToString();
+            }
+            if (operacion != 0)
+            {
+                sql += " and Inmuebles.IdOperacion = " + operacion.ToString();
+            }
+            if (orden != "")
+            {
+                sql += " order by " + orden;
+            }
+
+            try
+            {
+                if (sql == "")
+                {
+
+                    return this.ExecuteTable(@"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, TiposDeInmuebles.Tipo AS TipoDeInmueble, Operaciones.Operacion AS Operacion FROM Inmuebles INNER JOIN
+                                           TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN 
+                                           Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN 
+                                           Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
                                            Provincias ON Localidades.IdProvincia = Provincias.IdProvincia
-                                              WHERE 1=1 " + sql, CommandType.Text, "");
+                                               ", CommandType.Text, "");
+                    /*inner join 
+                    Usuarios ON Usuarios.IdUsuario = Inmuebles.IdUsuario 
+                     WHERE Usuarios.IdUsuario in (select IdUsuario from Usuarios where IdInmobiliaria 
+                    in 
+                    (select IdInmobiliaria from Usuarios 
+                    where IdUsuario = '" + IdUsuario + "')) order by FechaActualiza asc*/
+                }
+                else
+                {
+                    string g = @"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, TiposDeInmuebles.Tipo AS TipoDeInmueble, Operaciones.Operacion AS Operacion FROM Inmuebles INNER JOIN
+                                           TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN 
+                                           Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN 
+                                           Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
+                                           Provincias ON Localidades.IdProvincia = Provincias.IdProvincia
+                                              WHERE 1=1 " + sql;
+
+                    return this.ExecuteTable(@"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, TiposDeInmuebles.Tipo AS TipoDeInmueble, Operaciones.Operacion AS Operacion FROM Inmuebles INNER JOIN
+                                           TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN 
+                                           Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN 
+                                           Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
+                                           Provincias ON Localidades.IdProvincia = Provincias.IdProvincia
+                                              WHERE Inmuebles.idestado=1 and Inmuebles.publica='Si' " + sql, CommandType.Text, "");
                     /*
                      *  inner join 
                                                                    Usuarios ON Usuarios.IdUsuario = Inmuebles.IdUsuario 

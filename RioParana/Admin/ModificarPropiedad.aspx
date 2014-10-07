@@ -160,9 +160,10 @@
                             type="application/x-shockwave-flash" wmode="transparent"></embed>
                     </object>
                 </noscript>
+
                 &nbsp;</div>
             <div class="entry">
-                <table align="center" style="height: 82px; width: 468px;">
+                <table align="center" style="height: 82px; width: 486px;">
                     <tr>
                         <td>
                             <div align="right">
