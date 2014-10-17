@@ -217,6 +217,8 @@ namespace RioParana
 
                 Inmueble objInmueble = new Inmueble();
 
+                objInmueble.IDOperacion = Convert.ToInt32(rblOperacion.SelectedValue);
+
                 string[] tipoDeInmuebleEntero = e.CommandArgument.ToString().Split('(');
 
                 int cant = 0;

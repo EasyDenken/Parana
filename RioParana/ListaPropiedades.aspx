@@ -50,9 +50,12 @@
             <div id="content_imagenes" class="content_imagenes">
                 <div id="boxcontrol" class="boxcontrol_menu">
                  
+                   
                  
-                 
-                 
+                    <asp:RadioButtonList ID="rblOperacion" runat="server" RepeatDirection="Horizontal" Width="206px">
+                        <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>
+                        <asp:ListItem Text="Venta" Selected="True" Value="1"></asp:ListItem>
+                    </asp:RadioButtonList>
                  
                  
                  

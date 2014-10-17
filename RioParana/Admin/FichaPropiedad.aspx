@@ -33,6 +33,7 @@
         </noscript>
     </div>
     <div>
+        <a href="javascript:history.go(-1)">Volver</a>
         <input type="button" value="Imprimir Ficha" 
             onclick="javascript:pantallacompleta('Imprimir.aspx')" 
             
