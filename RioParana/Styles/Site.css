@@ -279,6 +279,10 @@ color: #2e2e2e;
     height: 22px;
 }
 
+.swiffy-transparent svg g > g > rect {
+    fill: transparent !important;
+}
+
 
 
 /*********************************  PAGINA DE COMBO BOX *****************************************/
