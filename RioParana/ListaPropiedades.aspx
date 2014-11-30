@@ -52,7 +52,7 @@
                  
                    
                  
-                    <asp:RadioButtonList ID="rblOperacion" runat="server" RepeatDirection="Horizontal" Width="206px">
+                    <asp:RadioButtonList ID="rblOperacion" runat="server" RepeatDirection="Horizontal" Width="206px" AutoPostBack="True" OnSelectedIndexChanged="operacion_SelectedIndexChanged">
                         <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>
                         <asp:ListItem Text="Venta" Selected="false" Value="1"></asp:ListItem>
                     </asp:RadioButtonList>

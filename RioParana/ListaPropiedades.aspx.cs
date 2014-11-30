@@ -168,7 +168,14 @@ namespace RioParana
                 DataGrid1.DataBind();
             }
             //Session["grd_ItemList"] = null;//end the session
+        
+       }
+
+        protected void operacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarGrillaFavoritos();
         }
+
 
         protected void CargarGrillaFavoritos()
         {
@@ -178,7 +185,7 @@ namespace RioParana
 
                 InmueblesBLL bllInmuebles = new InmueblesBLL();
 
-                dt = bllInmuebles.SeleccionaInmueblesFavoritos();
+               dt = bllInmuebles.SeleccionaInmueblesFavoritos(rblOperacion.SelectedValue);
 
                 if (dt.Rows.Count != 0)
                 {

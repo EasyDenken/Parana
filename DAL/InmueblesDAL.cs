@@ -379,10 +379,9 @@ namespace RioParanaDAL
             }
         }
 
-        public DataTable SeleccionaInmueblesFavoritos()
+        public DataTable SeleccionaInmueblesFavoritos(string operacion)
         {
             this.OpenConnection();
-
             string sql = @"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, 
                                            Operaciones.Operacion AS Operacion, Estados.Estado AS Estado, TiposDeInmuebles.Tipo AS TipoDeInmueble
                                            FROM Inmuebles INNER JOIN 
@@ -393,18 +392,16 @@ namespace RioParanaDAL
                                            TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN
                                            Estados ON Inmuebles.IdEstado = Estados.IdEstado and Estados.Estado = 'Activo' where Favoritos = 'True'";
 
+            if (operacion != "")
+            {
+                sql += " and Inmuebles.IdOperacion = '" + operacion + "'";
+            }
+
+
             try
             {
 
-                return this.ExecuteTable(@"SELECT Inmuebles.*, Localidades.Nombre AS NombreLocalidad, Provincias.Nombre AS NombreProvincia, 
-                                           Operaciones.Operacion AS Operacion, Estados.Estado AS Estado, TiposDeInmuebles.Tipo AS TipoDeInmueble
-                                           FROM Inmuebles INNER JOIN 
-                                           Localidades ON Inmuebles.idLocalidad = Localidades.IdLocalidad INNER JOIN 
-                                           Provincias ON Localidades.IdProvincia = Provincias.IdProvincia INNER JOIN 
-                                            
-                                           Operaciones ON Inmuebles.IdOperacion = Operaciones.IdOperacion INNER JOIN
-                                           TiposDeInmuebles ON Inmuebles.IdTipoDeInmueble = TiposDeInmuebles.IdTipoDeInmueble INNER JOIN
-                                           Estados ON Inmuebles.IdEstado = Estados.IdEstado and Estados.Estado = 'Activo' where Favoritos = 'True'", CommandType.Text, "");
+                return this.ExecuteTable(sql, CommandType.Text, "");
             }
             catch (Exception ex)
             {
